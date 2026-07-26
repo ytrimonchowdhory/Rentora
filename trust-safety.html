@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trust & Safety - Rentora</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>html { scroll-behavior: smooth; }</style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans antialiased">
+
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <a href="index.html" class="text-2xl font-bold text-blue-600">
+                    <i class="fa-solid fa-truck-ramp-box mr-2"></i>Rentora
+                </a>
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="index.html" class="text-gray-600 hover:text-blue-600 font-medium">Home</a>
+                    <a href="how-it-works.html" class="text-gray-600 hover:text-blue-600 font-medium">How It Works</a>
+                    <a href="trust-safety.html" class="text-blue-600 font-semibold">Trust & Safety</a>
+                    <a href="contact.html" class="text-gray-600 hover:text-blue-600 font-medium">Contact</a>
+                    <a href="list-equipment.html" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg font-semibold transition">List Equipment</a>
+                    <a href="request-equipment.html" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-semibold transition">Request</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobileMenuBtn" class="text-gray-600 text-2xl"><i class="fa-solid fa-bars"></i></button>
+                </div>
+            </div>
+        </div>
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-t px-4 py-4 space-y-3">
+            <a href="index.html" class="block text-gray-600 hover:text-blue-600">Home</a>
+            <a href="how-it-works.html" class="block text-gray-600 hover:text-blue-600">How It Works</a>
+            <a href="trust-safety.html" class="block text-blue-600 font-semibold">Trust & Safety</a>
+            <a href="contact.html" class="block text-gray-600 hover:text-blue-600">Contact</a>
+            <a href="list-equipment.html" class="block bg-green-500 text-white text-center px-4 py-2 rounded-lg font-semibold">List Equipment</a>
+            <a href="request-equipment.html" class="block bg-blue-600 text-white text-center px-4 py-2 rounded-lg font-semibold">Request Equipment</a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="pt-28 pb-12 bg-gradient-to-br from-indigo-50 to-white">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">Trust & Safety</h1>
+            <p class="text-lg text-gray-600">Your safety is our priority. Here's how we keep the Rentora community secure.</p>
+        </div>
+    </section>
+
+    <!-- Content -->
+    <section class="py-12 bg-white">
+        <div class="max-w-4xl mx-auto px-4 space-y-10">
+
+            <div class="flex items-start gap-4 p-6 bg-blue-50 rounded-xl">
+                <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xl shrink-0">
+                    <i class="fa-solid fa-shield-halved"></i>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-2">Verified Listings</h3>
+                    <p class="text-gray-600">All equipment listings are reviewed before being published. We verify owner details to ensure authenticity and prevent fraudulent listings.</p>
+                </div>
+            </div>
+
+            <div class="flex items-start gap-4 p-6 bg-green-50 rounded-xl">
+                <div class="w-12 h-12 bg-green-100 text-green-600 rounded-full flex items-center justify-center text-xl shrink-0">
+                    <i class="fa-solid fa-lock"></i>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-2">Secure Data Handling</h3>
+                    <p class="text-gray-600">Your personal information is encrypted and securely stored. We never share your data with third parties without your consent. All form submissions use CSRF protection.</p>
+                </div>
+            </div>
+
+            <div class="flex items-start gap-4 p-6 bg-purple-50 rounded-xl">
+                <div class="w-12 h-12 bg-purple-100 text-purple-600 rounded-full flex items-center justify-center text-xl shrink-0">
+                    <i class="fa-solid fa-handshake"></i>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-2">Community Guidelines</h3>
+                    <p class="text-gray-600">All users must follow our community guidelines. Respectful communication, accurate descriptions, and timely returns are expected from everyone.</p>
+                </div>
+            </div>
+
+            <div class="flex items-start gap-4 p-6 bg-yellow-50 rounded-xl">
+                <div class="w-12 h-12 bg-yellow-100 text-yellow-600 rounded-full flex items-center justify-center text-xl shrink-0">
+                    <i class="fa-solid fa-file-shield"></i>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-2">Terms of Service</h3>
+                    <p class="text-gray-600">By using Rentora, you agree to our terms. Renters are responsible for returning equipment in good condition. Owners must provide accurate descriptions of their items.</p>
+                </div>
+            </div>
+
+            <!-- Important Notice -->
+            <div class="bg-gray-100 p-8 rounded-xl border-l-4 border-blue-600">
+                <h3 class="text-xl font-bold mb-3"><i class="fa-solid fa-circle-info mr-2 text-blue-600"></i> Important Notice</h3>
+                <p class="text-gray-600 mb-4">Rentora is a marketplace platform that connects equipment owners with renters. We facilitate connections but are not directly responsible for the condition of equipment or the conduct of users. Always inspect equipment before renting and communicate clearly with the other party.</p>
+                <p class="text-gray-600">If you encounter any issues, please <a href="contact.html" class="text-blue-600 hover:underline font-semibold">contact us immediately</a>.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+                <h3 class="text-2xl font-bold mb-4"><i class="fa-solid fa-truck-ramp-box mr-2"></i>Rentora</h3>
+                <p class="text-gray-400">The most reliable peer-to-peer equipment rental marketplace.</p>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4">Quick Links</h4>
+                <ul class="text-gray-400 space-y-2">
+                    <li><a href="index.html" class="hover:text-white">Home</a></li>
+                    <li><a href="how-it-works.html" class="hover:text-white">How It Works</a></li>
+                    <li><a href="trust-safety.html" class="hover:text-white">Trust & Safety</a></li>
+                    <li><a href="contact.html" class="hover:text-white">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4">For Users</h4>
+                <ul class="text-gray-400 space-y-2">
+                    <li><a href="list-equipment.html" class="hover:text-white">List Equipment</a></li>
+                    <li><a href="request-equipment.html" class="hover:text-white">Request Equipment</a></li>
+                </ul>
+            </div>
+            <div class="text-center md:text-right">
+                <h4 class="font-bold mb-4">Scan to Access</h4>
+                <div class="inline-block bg-white p-2 rounded-lg">
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=100x100&data=https://rentora-demo.com" alt="QR Code" class="w-24 h-24 mx-auto">
+                </div>
+                <p class="text-sm text-gray-400 mt-2">Scan to visit on mobile</p>
+            </div>
+        </div>
+        <div class="border-t border-gray-800 mt-8 pt-6 text-center text-gray-500 text-sm">
+            &copy; 2026 Rentora. All rights reserved.
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            document.getElementById('mobileMenu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

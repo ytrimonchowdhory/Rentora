@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rentora - Your Trusted Equipment Rental Marketplace</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        html { scroll-behavior: smooth; }
+        .fade-in { animation: fadeIn 0.6s ease-in; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans antialiased">
+
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <a href="index.html" class="text-2xl font-bold text-blue-600">
+                    <i class="fa-solid fa-truck-ramp-box mr-2"></i>Rentora
+                </a>
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="index.html" class="text-blue-600 font-semibold">Home</a>
+                    <a href="how-it-works.html" class="text-gray-600 hover:text-blue-600 font-medium">How It Works</a>
+                    <a href="trust-safety.html" class="text-gray-600 hover:text-blue-600 font-medium">Trust & Safety</a>
+                    <a href="contact.html" class="text-gray-600 hover:text-blue-600 font-medium">Contact</a>
+                    <a href="list-equipment.html" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg font-semibold transition">
+                        <i class="fa-solid fa-plus mr-1"></i> List Equipment
+                    </a>
+                    <a href="request-equipment.html" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-semibold transition">
+                        <i class="fa-solid fa-magnifying-glass mr-1"></i> Request
+                    </a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="mobileMenuBtn" class="text-gray-600 text-2xl">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-t px-4 py-4 space-y-3">
+            <a href="index.html" class="block text-blue-600 font-semibold">Home</a>
+            <a href="how-it-works.html" class="block text-gray-600 hover:text-blue-600">How It Works</a>
+            <a href="trust-safety.html" class="block text-gray-600 hover:text-blue-600">Trust & Safety</a>
+            <a href="contact.html" class="block text-gray-600 hover:text-blue-600">Contact</a>
+            <a href="list-equipment.html" class="block bg-green-500 text-white text-center px-4 py-2 rounded-lg font-semibold">List Equipment</a>
+            <a href="request-equipment.html" class="block bg-blue-600 text-white text-center px-4 py-2 rounded-lg font-semibold">Request Equipment</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-28 pb-20 bg-gradient-to-br from-blue-50 via-white to-blue-50">
+        <div class="max-w-7xl mx-auto px-4 text-center fade-in">
+            <h1 class="text-4xl md:text-6xl font-extrabold text-gray-900 mb-6">
+                Rent What You Need,<br>
+                <span class="text-blue-600">List What You Have</span>
+            </h1>
+            <p class="text-lg md:text-xl text-gray-600 mb-10 max-w-3xl mx-auto">
+                The simplest and safest marketplace to rent equipment or earn money by listing your idle tools and machinery.
+                No monthly fees, no complicated setup.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="request-equipment.html" class="bg-blue-600 hover:bg-blue-700 text-white text-lg px-10 py-4 rounded-xl shadow-lg font-bold transition transform hover:scale-105">
+                    <i class="fa-solid fa-magnifying-glass mr-2"></i> I Want to Rent
+                </a>
+                <a href="list-equipment.html" class="bg-white border-2 border-green-500 text-green-600 hover:bg-green-50 text-lg px-10 py-4 rounded-xl shadow-lg font-bold transition transform hover:scale-105">
+                    <i class="fa-solid fa-plus mr-2"></i> I Want to List
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Categories -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-4">Popular Categories</h2>
+            <p class="text-gray-500 text-center mb-10">Browse equipment people are renting and listing most</p>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="bg-blue-50 p-6 rounded-xl text-center hover:shadow-lg transition cursor-pointer">
+                    <i class="fa-solid fa-tools text-4xl text-blue-600 mb-3"></i>
+                    <h3 class="font-bold text-lg">Tools</h3>
+                    <p class="text-sm text-gray-500">Drills, Saws, Generators</p>
+                </div>
+                <div class="bg-green-50 p-6 rounded-xl text-center hover:shadow-lg transition cursor-pointer">
+                    <i class="fa-solid fa-camera text-4xl text-green-600 mb-3"></i>
+                    <h3 class="font-bold text-lg">Cameras</h3>
+                    <p class="text-sm text-gray-500">DSLR, GoPro, Lenses</p>
+                </div>
+                <div class="bg-purple-50 p-6 rounded-xl text-center hover:shadow-lg transition cursor-pointer">
+                    <i class="fa-solid fa-chair text-4xl text-purple-600 mb-3"></i>
+                    <h3 class="font-bold text-lg">Furniture</h3>
+                    <p class="text-sm text-gray-500">Tables, Chairs, Tents</p>
+                </div>
+                <div class="bg-yellow-50 p-6 rounded-xl text-center hover:shadow-lg transition cursor-pointer">
+                    <i class="fa-solid fa-car text-4xl text-yellow-600 mb-3"></i>
+                    <h3 class="font-bold text-lg">Vehicles</h3>
+                    <p class="text-sm text-gray-500">Bikes, Trailers, Carts</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section id="how-it-works" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">How It Works</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition text-center">
+                    <div class="w-16 h-16 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">1</div>
+                    <h3 class="text-xl font-bold mb-3">Search or Request</h3>
+                    <p class="text-gray-600">Find the equipment you need or submit a request and let owners come to you.</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition text-center">
+                    <div class="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">2</div>
+                    <h3 class="text-xl font-bold mb-3">Connect Safely</h3>
+                    <p class="text-gray-600">We verify listings so you can connect with trusted owners in your area.</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition text-center">
+                    <div class="w-16 h-16 bg-purple-100 text-purple-600 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">3</div>
+                    <h3 class="text-xl font-bold mb-3">Rent & Relax</h3>
+                    <p class="text-gray-600">Pick up the equipment, finish your job, and return it easily.</p>
+                </div>
+            </div>
+            <div class="text-center mt-10">
+                <a href="how-it-works.html" class="text-blue-600 font-semibold hover:underline">Learn more <i class="fa-solid fa-arrow-right ml-1"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats / Trust -->
+    <section class="py-16 bg-blue-600 text-white">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div><div class="text-4xl font-bold">50+</div><div class="text-blue-200 mt-1">Listings</div></div>
+            <div><div class="text-4xl font-bold">30+</div><div class="text-blue-200 mt-1">Happy Renters</div></div>
+            <div><div class="text-4xl font-bold">99%</div><div class="text-blue-200 mt-1">Satisfaction</div></div>
+            <div><div class="text-4xl font-bold">24/7</div><div class="text-blue-200 mt-1">Support</div></div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-4">Ready to Get Started?</h2>
+            <p class="text-gray-600 mb-8">Join Rentora today and start renting or listing equipment in minutes.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="list-equipment.html" class="bg-green-500 hover:bg-green-600 text-white px-8 py-3 rounded-lg font-bold transition">
+                    <i class="fa-solid fa-plus mr-2"></i> List Your Equipment
+                </a>
+                <a href="request-equipment.html" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-bold transition">
+                    <i class="fa-solid fa-magnifying-glass mr-2"></i> Request Equipment
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+                <h3 class="text-2xl font-bold mb-4"><i class="fa-solid fa-truck-ramp-box mr-2"></i>Rentora</h3>
+                <p class="text-gray-400">The most reliable peer-to-peer equipment rental marketplace.</p>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4">Quick Links</h4>
+                <ul class="text-gray-400 space-y-2">
+                    <li><a href="index.html" class="hover:text-white">Home</a></li>
+                    <li><a href="how-it-works.html" class="hover:text-white">How It Works</a></li>
+                    <li><a href="trust-safety.html" class="hover:text-white">Trust & Safety</a></li>
+                    <li><a href="contact.html" class="hover:text-white">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4">For Users</h4>
+                <ul class="text-gray-400 space-y-2">
+                    <li><a href="list-equipment.html" class="hover:text-white">List Equipment</a></li>
+                    <li><a href="request-equipment.html" class="hover:text-white">Request Equipment</a></li>
+                </ul>
+            </div>
+            <div class="text-center md:text-right">
+                <h4 class="font-bold mb-4">Scan to Access</h4>
+                <div class="inline-block bg-white p-2 rounded-lg">
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=100x100&data=https://rentora-demo.com" alt="QR Code" class="w-24 h-24 mx-auto">
+                </div>
+                <p class="text-sm text-gray-400 mt-2">Scan to visit on mobile</p>
+            </div>
+        </div>
+        <div class="border-t border-gray-800 mt-8 pt-6 text-center text-gray-500 text-sm">
+            &copy; 2026 Rentora. All rights reserved.
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            document.getElementById('mobileMenu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
